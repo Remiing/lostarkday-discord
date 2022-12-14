@@ -2,6 +2,7 @@ import requests
 import config
 
 day_webhook_url = config.day_webhook_url
+day_webhook_url = os.environ['day_webhook_url']
 
 
 def sendMessage(characterName, characterClass, equipType, before_equipLV, after_equipLV):
