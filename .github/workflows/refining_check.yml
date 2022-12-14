@@ -35,5 +35,6 @@ jobs:
       run: |
         git config user.name Remiing
         git config user.email songjm8138@naver.com
+        git add data/members_dict.pkl
         git commit -m "data update"
         git push
