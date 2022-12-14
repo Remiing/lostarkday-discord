@@ -1,8 +1,8 @@
 import requests
-import config
+# import config
 import os
 
-day_webhook_url = config.day_webhook_url
+# day_webhook_url = config.day_webhook_url
 day_webhook_url = os.environ['day_webhook_url']
 
 
