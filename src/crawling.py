@@ -3,6 +3,7 @@ import json
 import config
 
 lark_api_key = 'bearer ' + config.lark_api_key
+lark_api_key = os.environ['lark_api_key']
 
 
 def getItemLV(characterName):
