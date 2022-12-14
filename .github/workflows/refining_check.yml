@@ -5,7 +5,7 @@ name: refining_check
 
 on:
   schedule: 
-    - cron: '0 18 * * *'
+    - cron: '* 1-18 * * *'
 
 jobs:
   build:
