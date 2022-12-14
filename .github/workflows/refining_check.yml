@@ -35,6 +35,10 @@ jobs:
       run: |
         git config user.name Remiing
         git config user.email songjm8138@naver.com
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "1234"
+          echo "5678"
+        fi
         git add data/members_dict.pkl
         git commit -m "data update"
         git push
