@@ -1,9 +1,9 @@
 import requests
 import json
-import config
+# import config
 import os
 
-lark_api_key = 'bearer ' + config.lark_api_key
+# lark_api_key = 'bearer ' + config.lark_api_key
 lark_api_key = os.environ['lark_api_key']
 
 
