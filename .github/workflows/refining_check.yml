@@ -31,15 +31,7 @@ jobs:
       run: |
         python main.py
         
-    - name: Check for modified files
-      id: git-check
-      run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
-        
-    - name: members_dict.pkl commit and push
-      if: steps.git-check.outputs.modified == 'true'
-      run: |
-        git config user.name Remiing
-        git config user.email songjm8138@naver.com
-        git add data/members_dict.pkl
-        git commit -m "data update"
-        git push
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        file_pattern: '*.pkl'
+        commit_message: Data update
