@@ -20,10 +20,10 @@ def sendMessage(characterName, characterClass, equipType, before_equipLV, after_
                         "name": equipType,
                         "value": f"{before_equipLV} > {after_equipLV}"
                     },
-                    {
-                        "name": "기대값",
-                        "value": "-1골드"
-                    }
+#                     {
+#                         "name": "기대값",
+#                         "value": "-1골드"
+#                     }
                 ]
             }
         ]
