@@ -1,12 +1,16 @@
 import requests
 # import config
 import os
+from dotenv import load_dotenv
 
+
+load_dotenv()
 # day_webhook_url = config.day_webhook_url
-day_webhook_url = os.environ['day_webhook_url']
+# day_webhook_url = os.environ['day_webhook_url']
+day_webhook_url = os.environ.get('day_webhook_url')
 
 
-def sendMessage(characterName, characterClass, equipType, before_equipLV, after_equipLV):
+def sendMessage(characterName, characterClass, equipType, before_equipLV, after_equipLV, part_gold):
     headers = {
         'Content-Type': 'application/json'
     }
@@ -20,10 +24,10 @@ def sendMessage(characterName, characterClass, equipType, before_equipLV, after_
                         "name": equipType,
                         "value": f"{before_equipLV} > {after_equipLV}"
                     },
-#                     {
-#                         "name": "기대값",
-#                         "value": "-1골드"
-#                     }
+                    {
+                        "name": "기대값",
+                        "value": f"{part_gold} 골드"
+                    }
                 ]
             }
         ]
